@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orçamento Pipper Joias</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/@headlessui/react/dist/headlessui.umd.development.js"></script>
+  <style>
+       .rotate-180 {
+            transform: rotate(180deg);
+        }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-gray-900">
+  <div class="container mx-auto p-4">
+    <h1 class="text-4xl font-bold mb-4 text-gray-300">Orçamento Pipper Joias</h1>
+
+    <hr class="mt-6">
+    <section class="flex flex-col gap-4 mb-4 text-gray-300">
+      <h2 class="text-3xl text-gray-300">Detalhes Técnicos </h2>
+      <table class="min-w-full bg-gray-700 shadow-md rounded-lg overflow-hidden">
+        <thead class="bg-gray-800 text-white">
+          <tr>
+            <th class="py-2 px-4 text-left">Descrição</th>
+            <th class="py-2 px-4 text-left">Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border-t py-2 px-4">Valor da hora técnica</td>
+            <td class="border-t py-2 px-4">R$ 100,00</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="border-t py-2 px-4">Quantidade de horas para este projeto</td>
+            <td class="border-t py-2 px-4"><span class="current_hours">6 Horas</span></td>
+          </tr>
+          <tr>
+            <td class="border-t py-2 px-4">Valor total</td>
+            <td class="border-t py-2 px-4"><span class="current_value">R$ 600,00</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+    <hr class="mb-6">
+
+    <section class="mb-6">
+      <h3 class="text-2xl font-semibold mb-4 text-gray-300">Modificações solicitadas</h3>
+
+      <div id="accordion" class="w-full">
+        <div class="flex w-full justify-between items-center cursor-pointer" onclick="toggleAccordion(this,'home')">
+          <h2 class="text-xl font-semibold mb-2 text-gray-300" >
+            Página inicial
+          </h2>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#d1d5db">
+            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/>
+          </svg>
+        </div>
+        <div id="home" class="hidden border-gray-300 rounded-lg bg-gray-600 p-4">
+          <ul class="list-disc list-inside mb-4 flex flex-col gap-3 text-gray-300">
+            <li class="text-sm">
+              <span class="text-base">
+                A estrutura padrão são banners no topo anunciando a oferta principal da loja, média de 03 a 05 banners
+              </span>
+              <b class="italic">( 15 min )</b>
+            </li>
+            <li>
+              <span class="text-base">
+                O vídeo pode ser trocado de lugar, descendo um pouco mais na homepage
+              </span>
+              <b class="italic">( 15 min )</b>
+            </li>
+            <li>
+              <span class="text-base">
+                Em questões de mapa de calor, o quanto pra cima melhor, devemos trazer uma vitrine de produtos com a Curva A.
+                Colocar a categoria mais vendida curva A no topo da home, abertos como uma vitrine. (casamento?)
+              </span>
+              <b class="italic">( 15 min )</b>
+            </li>
+            <li>
+              <span class="text-base">
+                Topbar de benefícios deve ficar fixa no topo mesmo quando o usuário dá scrow
+              </span>
+
+              <b class="italic">( 15 min )</b>
+            </li>
+            <li>
+              <span class="text-base">
+                Organização dos elementos da home deve ser mais "aberto", e "corrido", com categorias mostrando mais os produtos.
+              </span>
+              <b class="italic">( 2 hrs )</b>
+              <div>
+                <span class="text-base">Exemplos:</span>
+                <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
+                  <div class="flex flex-col">
+                    <span class="text-base font-bold">Computador</span>
+                    <img src="image.png" alt="Estrutura categorias desktop">
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-base font-bold">Celular</span>
+                    <img src="image-1.png" alt="Estrutura categorias">
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="text-base">
+                Para produtos ou pares que são acima de R$ 699,00, mencione dentro do produto ou na foto do produto o Frete Grátis.
+              </span>
+              <b class="italic">( 1 hr )</b>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div id="accordion" class="w-full">
+        <div class="flex w-full justify-between items-center cursor-pointer" onclick="toggleAccordion(this,'product')">
+          <h2 class="text-xl font-semibold mb-2 text-gray-300" >
+            Página do produto <b class="italic">(10 min por produto)</b>
+          </h2>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#d1d5db">
+            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/>
+          </svg>
+        </div>
+        <div id="product" class="hidden border-gray-300 rounded-lg bg-gray-600 p-4">
+          <ul class="list-disc list-inside mb-4 text-gray-300">
+            <li>
+              Analisar as fotos mais curtidas do instagram, compreender qual o padrão existe entre elas e inserir elas no
+              site (caso ainda não estejam)
+              <b>*Contanto que as melhores fotos já foram selecionadas do Instagram</b>
+            </li>
+            <li>
+              Os produtos no geral já possuem ótimas fotos e com ótima variedade, mas quanto mais fotos tanto no produto,
+              quanto na descrição (pensando no mobile), melhor!
+            </li>
+            <li>
+              Estratégia de preço psicológico: diminuir 1 real exemplo: 2.000,00, cadastrar o produto por 1.999,99
+            </li>
+            <li>
+              A imagem em preto e branco do casal dentro de cada produto pode ser substituida por uma foto do produto.
+              (Preferência fotos bem populares do instagram).
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div id="accordion" class="w-full">
+        <div class="flex w-full justify-between items-center cursor-pointer" onclick="toggleAccordion(this,'category')">
+          <h2 class="text-xl font-semibold mb-2 text-gray-300" >
+            Página de categoria <b class="italic">(20 min por categoria)</b>
+          </h2>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#d1d5db">
+            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/>
+          </svg>
+        </div>
+        <div id="category" class="hidden border-gray-300 rounded-lg bg-gray-600 p-4">
+          <ul class="list-disc list-inside mb-4 text-gray-300">
+            <li>
+              O texto do topo das categorias é muito importante para SEO, entretanto ele atua em SEO quando é texto e não
+              imagem. No momento temos banners nos topos das categorias com textos dentro.
+            </li>
+            <li>
+              Ajuste trocando o banner do topo das categorias para imagens que criem desejo (ou até remover o banner caso
+              desejem)
+            </li>
+            <li>
+              Focar totalmente nas alianças o quanto antes para o topo da página (lembrando sempre do mapa de calor).
+            </li>
+            <li>
+              O texto para categorias é importante, e pode estar mais para o rodapé da página (caso a plataforma do
+              ecommerce permita).
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div id="accordion" class="w-full">
+        <div class="flex w-full justify-between items-center cursor-pointer" onclick="toggleAccordion(this,'others')">
+          <h2 class="text-xl font-semibold mb-2 text-gray-300" >
+            Pontos extras
+          </h2>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#d1d5db">
+            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/>
+          </svg>
+        </div>
+        <div id="others" class="hidden border-gray-300 rounded-lg bg-gray-600 p-4">
+          <ul class="list-disc list-inside mb-4 text-gray-300">
+            <li>
+              Para incentivar a compra, crie alguns cupons de desconto e unifique eles em uma página (Cupons), onde você
+              poderá dividir eles por mínimo de compra.
+            </li>
+            <li>
+              Faria sentido criar uma categoria de ofertas e inserir todas as alianças de menor gramatura? (Colocar uma
+              comunicação diferente nessa categoria, bem promocional). <b>(30 min)</b>
+            </li>
+            <li>
+              Integração com o widde.io <b>(1 hr)</b>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+    </section>
+
+  </div>
+  <script>
+    function toggleAccordion(element, id) {
+
+      const elementToToggle = document.getElementById(id);
+      elementToToggle.classList.toggle('hidden');
+
+      const icon = element.querySelector('.icon');
+      icon.classList.toggle('rotate-180');
+    }
+  </script>
+</body>
+
+</html>
